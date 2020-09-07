@@ -308,15 +308,45 @@
             <div class="iq-footer-logo mb-5">
               <a href="https://www.hullop.com/"><img src="images/hullop_logo.png" class="img-fluid" alt="image"></a>
             </div>
-            <form class="position-relative subscribe-form">
-              <div class="form-group mb-0">
-                <input type="email" class="form-control position-relative subscription-email  mb-0" placeholder="Ingresar Correo">
+
+            <form action="https://formspree.io/soporte@hullop.com" method="post" data-toggle="validation" novalidate>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="name">Nombre</label>
+                  <input class="form-control" type="text" name="name" id="name" placeholder="Nombre" required>
+                  <div class="invalid-feedback">
+                    Por favor, complete su nombre.
+                  </div>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="email">Dirección de correo</label>
+                  <input class="form-control" type="email" name="_replyto" id="email" placeholder="Correo" required>
+                  <div class="invalid-feedback">
+                    Por favor, ingrese una dirección de correo.
+                  </div>
+                </div>
               </div>
-              <a class="slide-button button bt-subscribe subscription-button " href="javascript:void(0)">
-                <div class="first">Solicitar Soporte</div>
-                <div class="second">Solicitar Soporte</div>
-              </a>
+
+              <div class="form-group">
+                <label for="message">Mensaje</label>
+                <textarea class="form-control" name="message" id="message" rows="4" placeholder="Escriba su mensaje" required></textarea>
+                  <div class="invalid-feedback">
+                    Por favor, escriba un mensaje.
+                  </div>
+              </div>
+
+              <input type="hidden" name="_next" value="https://www.hullop.com/thanks.html">
+              <input type="hidden" name="_subject" value="Contacto web www.hullop.com">
+              <input type="hidden" name="_language" value="es">
+              <input class="d-none" type="text" name="_gotcha">
+
+              <p class="mb-0 text-right">
+                <button type="submit" value="Send" class="button subscription-button btn-lg">
+                  Enviar
+                </button>
+              </p>
             </form>
+
             <div class="contact mt-4 d-inline-block">
               <i class="fa fa-phone"></i><span class="iq-fw-5 ml-2">+54 11 4371 9384</span>
               <div class="email d-inline-block"><a href="mail:contacto@hullop.com"> <span class="__cf_email__" data-cfemail="d79ab6bebb979ab6a5bcb2a3bfb8b9f9b4b8ba">[correo protegido]</span></a></div>
